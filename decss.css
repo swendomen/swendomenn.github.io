@@ -1,0 +1,287 @@
+:root {
+  --main: ;
+  --white: #ffffff;
+  --black: #000000;
+  --grey: #1d1d1d;
+  --greyy: #181818;
+  --greyyy: #8a8887;
+  --red: #d1363a;
+}
+
+@font-face {
+  font-family: "MarkProk";
+  src: url(FF-Mark-Pro-Font-Family/MarkPro-Book.otf);
+}
+
+@font-face {
+  font-family: MarkPro;
+  src: url(FF-Mark-Pro-Font-Family/MarkPro-Bold.otf);
+}
+
+body {
+  min-height: 100px;
+  background-color: var(--greyy);
+  color: var(--white);
+  font-family: "MarkProk";
+  font-weight: 600;
+  font-size: 80%;
+}
+
+body h1 {
+  font-family: "MarkPro";
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(10px);
+  transform: translateY(10%);
+}
+
+.floating {
+  animation: change 3s infinite ease-in-out;
+  transform: translateY(-18%);
+}
+
+@keyframes change {
+  50% {
+    transform: translateY(18%);
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.mynavbar input {
+  background-color: transparent;
+  outline: var(--white);
+}
+
+.mynavbar input::placeholder {
+  color: var(--white);
+  font-size: 13px;
+}
+
+.mynavbar {
+  background-color: var(--grey);
+  color: var(--greyy);
+  letter-spacing: 1.2px;
+  padding-top: 10px;
+}
+
+.mynavbar .nav-link {
+  color: white;
+  text-transform: uppercase;
+}
+
+.mynavbar button {
+  background-color: var(--red);
+}
+
+.mynavbar button:hover {
+  background-color: transparent;
+  color: var(--white);
+}
+
+.dropdown-item:hover {
+  background-color: var(--red);
+  color: var(--white);
+  transition: 0.2s;
+}
+
+.nav-link a:active {
+  color: white;
+}
+
+.mynavbar .btn {
+  color: var(--white);
+}
+
+.mynavbar .btn,
+.mynavbar ::placeholder {
+  max-height: 50px;
+  font-size: 100%;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  width: 34%;
+}
+
+.logo {
+  max-height: 24px;
+}
+
+.jumbo {
+  margin-top: -6rem;
+  padding-top: 8rem;
+  background-image: url();
+  min-height: 582px;
+  background-repeat: no-repeat;
+
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.jumbo button {
+  background-color: #d1363b;
+}
+
+.jumbo .btn {
+  margin-bottom: 10px;
+}
+
+.jumbo h6 {
+  letter-spacing: 1px;
+}
+
+.jumbo p {
+  background-color: var(--red);
+  letter-spacing: 2px;
+  font-weight: 1200;
+  padding: 6px;
+}
+
+.jumbo a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.jumbo video {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.jumbo .games {
+  margin-top: -250px;
+}
+
+.news {
+  background-color: var(--black);
+  padding-top: 40px;
+  min-height: 856px;
+}
+
+.news .card {
+  cursor: pointer;
+  /* background-image: url(gam/Vayne_splash.jpg); */
+  background-color: #000000;
+}
+
+.games img,
+.news img {
+  width: 100%;
+  /* border-radius: 6%; */
+}
+
+.news {
+  padding-bottom: 40px;
+}
+
+.card {
+  min-height: 700px;
+  width: 100%;
+  background-size: cover;
+  padding-top: 600px;
+  padding-left: 50px;
+  padding-bottom: 20px;
+  text-decoration: none;
+  color: var(--greyyy);
+  letter-spacing: 2px;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: 30px;
+}
+
+.contact {
+  min-height: 100px;
+  background-color: var(--greyy);
+  margin-top: 10px;
+  padding-top: 25px;
+  color: var(--grey);
+}
+
+.contact a,
+.contact p {
+  color: var(--greyyy);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  padding: 12px;
+  font-size: 90%;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: var(--white);
+  text-decoration: underline;
+  transition: 0.4s;
+}
+
+.story {
+  margin-top: 80px;
+}
+
+.story h1 {
+  font-weight: 1000;
+  font-size: 45px;
+}
+
+.story2 {
+  background-color: var(--white);
+  color: var(--grey);
+  margin-top: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.story2 h1 {
+  font-weight: 1000;
+  font-size: 45px;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transform: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.vaynes a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: large;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-left: 20px;
+  margin-top: 100px;
+}
+
+.vayne {
+  text-decoration: none;
+  color: var(--white);
+  font-size: large;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-left: 30px;
+  margin-top: -100px;
+}
+
+.news a {
+  text-decoration: none;
+}
